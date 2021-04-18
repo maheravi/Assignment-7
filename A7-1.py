@@ -23,14 +23,39 @@ def div(x, y):
     return result
 
 
-a = {'s': 3, 'm': 5}
-b = {'s': 2, 'm': 7}
+print('first input your two fraction')
+s = int(input("Enter a numerator for variable one: "))
+m = int(input("Enter a denominator for variable one: "))
+a = {'s': s, 'm': m}
+s = int(input("Enter a numerator for variable two: "))
+m = int(input("Enter a denominator for variable two: "))
+b = {'s': s, 'm': m}
+while True:
+    print('done! Now choose your action from the list below: ')
+    print('1- multiplication two Fraction')
+    print('2- Addition two Fraction')
+    print('3- minus two Fraction')
+    print('4- div two Fraction')
+    print('5- exit')
+    choice = int(input('choose what do you want?: '))
+    if choice == 1:
+        c = mul(a, b)
+        print('the multiplication of these two Fraction is: ')
+        print(c['s'], '/', c['m'])
+    elif choice == 2:
+        c = sum(a, b)
+        print('the Addition of these two Fraction is: ')
+        print(c['s'], '/', c['m'])
+    elif choice == 3:
+        c = minus(a, b)
+        print('the minus of these two Fraction is: ')
+        print(c['s'], '/', c['m'])
+    elif choice == 4:
+        c = div(a, b)
+        print('the division  of these two Fraction is: ')
+        print(c['s'], '/', c['m'])
+    elif choice == 5:
+        exit()
+    else:
+        print('Enter correct option from menu')
 
-c= mul(a, b)
-print(c['s'], '/', c['m'])
-c= sum(a, b)
-print(c['s'], '/', c['m'])
-c= minus(a, b)
-print(c['s'], '/', c['m'])
-c= div(a, b)
-print(c['s'], '/', c['m'])
