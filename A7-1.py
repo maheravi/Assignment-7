@@ -25,6 +25,7 @@ def div(x, y):
 
 a = {'s': 3, 'm': 5}
 b = {'s': 2, 'm': 7}
+
 c= mul(a, b)
 print(c['s'], '/', c['m'])
 c= sum(a, b)
